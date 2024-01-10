@@ -5,12 +5,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Component
 @SessionScope
 public class CartBean {
-    private List<CartItem> cartItems = new ArrayList<>();
+
+
+    private Set<CartItem> cartItems = new HashSet<>();
 
     public void addCardItem(CartItem cartItem){
         cartItems.add(cartItem);

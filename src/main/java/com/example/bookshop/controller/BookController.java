@@ -33,6 +33,7 @@ public class BookController {
     }
     @ModelAttribute("cartSize")
     public Integer cartSize(){
+
         return cartService.cartSize();
     }
     //book/book-details?id=1&isbn=ISBN-1234
