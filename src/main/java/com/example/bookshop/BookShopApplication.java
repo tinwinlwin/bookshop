@@ -24,7 +24,8 @@ public class BookShopApplication {
     private final BookDao bookDao;
     private final GenreDao genreDao;
     private final PublisherDao publisherDao;
-    @Bean @Transactional @Profile("data")
+    @Bean @Transactional
+    @Profile("data")
     public ApplicationRunner runner(){
         return  r ->{
             Author author1=
