@@ -14,7 +14,7 @@ import java.util.Objects;
 public class CartItem {
 
     private int id;
-    private String sign;
+    private String isbn;
 
     private String title;
     private double price;
@@ -25,11 +25,11 @@ public class CartItem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CartItem cartItem = (CartItem) o;
-        return id == cartItem.id && Objects.equals(sign, cartItem.sign);
+        return id == cartItem.id && Objects.equals(isbn, cartItem.isbn);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, sign);
+        return Objects.hash(id, isbn);
     }
 }
